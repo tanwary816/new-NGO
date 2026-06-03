@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header>
         <div class="logo-area">
             <div class="logo-icon">IF</div>
@@ -20,16 +19,14 @@
         <nav>
             <ul>
                 <li><a href="#about">Our Vision</a></li>
-                <li><a href="#departments">Sectors</a></li>
-                <li><a href="#volunteer-portal">Join Network</a></li>
                 <li><a href="#campaigns">Live Projects</a></li>
+                <li><a href="#volunteer-portal">Join Network</a></li>
                 <li><a href="#donate-hub">Support Hub</a></li>
             </ul>
         </nav>
         <a href="#donate-hub" class="btn-nav-donate">Contribute 💚</a>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="about">
         <div class="hero-content">
             <span class="badge">✨ Section 8 Registered Non-Profit Organization</span>
@@ -37,9 +34,10 @@
             <p>InAmigos Foundation is dedicated to driving sustainable social welfare through target-driven initiatives in education, healthcare, and skill development, empowering the next generation to build an equitable tomorrow.</p>
             <div class="hero-buttons">
                 <a href="#volunteer-portal" class="btn-primary">Apply as an Intern/Volunteer →</a>
-                <a href="#campaigns" class="btn-secondary">Explore Our Initiatives</a>
+                <a href="#campaigns" class="btn-secondary">Explore Initiatives</a>
             </div>
         </div>
+        
         <div class="hero-visual">
             <div class="glow-sphere-green"></div>
             <div class="earth-container">
@@ -51,7 +49,6 @@
         </div>
     </section>
 
-    <!-- FEATURE 1: Official Structure Campaign Progress Trackers -->
     <section class="feature-section dark-bg" id="campaigns">
         <span class="section-tag">— LIVE OPERATIONS MATRIX —</span>
         <h2>Active Core Departments</h2>
@@ -86,13 +83,12 @@
         </div>
     </section>
 
-    <!-- FEATURE 2: Professional Framework Segmented Intern/Volunteer Registration -->
     <section class="feature-section" id="volunteer-portal">
         <span class="section-tag">— HUMAN CAPITAL ENGINE —</span>
         <h2>Join as a Volunteer or Intern</h2>
         <p class="section-subtitle">We build pathways for students and professionals to drive measurable change. Submit your operational track below.</p>
         
-        <form class="portal-form" onsubmit="event.preventDefault();">
+        <form class="portal-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Application Simulated Successfully!');">
             <div class="form-row">
                 <div class="form-group">
                     <label>Full Name</label>
@@ -120,7 +116,7 @@
                     <select required>
                         <option value="4-weeks">4 Weeks (Standard Internship)</option>
                         <option value="8-weeks">8 Weeks (Advanced Track)</option>
-                        <option value="long-term">Long-Term Voluneteership</option>
+                        <option value="long-term">Long-Term Volunteers-hip</option>
                     </select>
                 </div>
             </div>
@@ -128,7 +124,6 @@
         </form>
     </section>
 
-    <!-- FEATURE 3: Official Segment Donation Engine Hub -->
     <section class="feature-section dark-bg" id="donate-hub">
         <span class="section-tag">— TRANSPARENT RESOURCE MANAGEMENT —</span>
         <h2>Support Our Welfare Framework</h2>
@@ -136,46 +131,55 @@
         
         <div class="donation-card">
             <div class="donation-toggle">
-                <button class="toggle-btn active">General Fund</button>
-                <button class="toggle-btn">Child Education</button>
+                <button class="toggle-btn active" onclick="selectType(this, 'General Fund')">General Fund</button>
+                <button class="toggle-btn" onclick="selectType(this, 'Child Education')">Child Education</button>
             </div>
+            
             <div class="amount-grid">
-                <button class="amount-btn">₹500</button>
-                <button class="amount-btn active">₹1,000</button>
-                <button class="amount-btn">₹2,500</button>
-                <button class="amount-btn">Custom</button>
+                <button class="amount-btn" onclick="selectAmount(this, 500)">₹500</button>
+                <button class="amount-btn active" onclick="selectAmount(this, 1000)">₹1,000</button>
+                <button class="amount-btn" onclick="selectAmount(this, 2500)">₹2,500</button>
+                <button class="amount-btn" onclick="selectCustomAmount(this)">Custom</button>
             </div>
-            <p class="donation-impact-text">💡 An allocation of <strong>₹1,000</strong> completely covers the learning modules and health kits for one student for an entire quarter.</p>
-            <a href="#" class="btn-primary block-btn">Proceed to Secure Gateway</a>
+            
+            <div class="donation-impact-text" id="impact-description">
+                💡 An allocation of <strong id="selected-val">₹1,000</strong> completely covers the learning modules and health kits for one student for an entire quarter.
+            </div>
+            <button class="btn-primary block-btn" onclick="processDonation()">Proceed to Secure Gateway</button>
         </div>
     </section>
 
-    <!-- FEATURE 4: Geospatial Regional Impact Mapping -->
     <section class="feature-section" id="impact-map">
         <span class="section-tag">— STRATEGIC GEOGRAPHIC GRID —</span>
         <h2>National Operational Footprint</h2>
-        <p class="section-subtitle">Hover over active hubs to view localized regional chapters and institutional alliances managed by the foundation.</p>
+        <p class="section-subtitle">Hover over or tap on active hotspots to view localized regional chapters managed by the foundation.</p>
         
         <div class="map-container">
             <div class="mock-map">
-                <div class="hotspot hub-asia" style="top: 50%; left: 55%;">
+                <div class="grid-line horizontal" style="top: 25%;"></div>
+                <div class="grid-line horizontal" style="top: 50%;"></div>
+                <div class="grid-line horizontal" style="top: 75%;"></div>
+                <div class="grid-line vertical" style="left: 25%;"></div>
+                <div class="grid-line vertical" style="left: 50%;"></div>
+                <div class="grid-line vertical" style="left: 75%;"></div>
+
+                <div class="hotspot hub-north">
                     <div class="pulse"></div>
                     <div class="tooltip">
-                        <strong>North India Operations</strong><br>📍 Corporate HQ Connect<br>🎒 45+ Active School Alliances
+                        <strong>North India Operations</strong><br>📍 New Delhi Hub Connect<br>🎒 45+ Active School Alliances
                     </div>
                 </div>
-                <div class="hotspot hub-africa" style="top: 62%; left: 58%;">
+                <div class="hotspot hub-south">
                     <div class="pulse"></div>
                     <div class="tooltip">
                         <strong>West & South Hubs</strong><br>🌳 12+ Mega Green Drives<br>📋 1200+ Volunteers Tracked
                     </div>
                 </div>
-                <span style="color: rgba(255,255,255,0.15); font-size: 16px; font-weight: bold; letter-spacing: 1px;">[ NATIONAL CHAPTER INTEGRATION UI ]</span>
+                <span class="map-wireframe-text">📍 ACTIVE INAMIGOS OPERATIONS SYSTEM</span>
             </div>
         </div>
     </section>
 
-    <!-- FEATURE 5: Real-time Institutional Testimonial Slider -->
     <section class="feature-section dark-bg" id="stories">
         <span class="section-tag">— STAKEHOLDER REFLECTIONS —</span>
         <h2>Voice of Our Community</h2>
@@ -199,12 +203,48 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-bottom">
-            <p>&copy; 2026 InAmigos Foundation | Functional Feature Architecture Mockup. All Rights Reserved.</p>
+            <p>&copy; 2026 InAmigos Foundation | Debugged Structural Feature Code Base. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        let selectedValue = 1000;
+        let selectedFund = "General Fund";
+
+        function selectType(button, fundName) {
+            document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            selectedFund = fundName;
+            updateImpactDisplay();
+        }
+
+        function selectAmount(button, amount) {
+            document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            selectedValue = amount;
+            updateImpactDisplay();
+        }
+
+        function selectCustomAmount(button) {
+            document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            let userVal = prompt("Enter custom contribution amount (INR):", "5000");
+            if(userVal && !isNaN(userVal)) {
+                selectedValue = parseInt(userVal);
+            }
+            updateImpactDisplay();
+        }
+
+        function updateImpactDisplay() {
+            document.getElementById('selected-val').innerText = "₹" + selectedValue.toLocaleString('en-IN');
+        }
+
+        function processDonation() {
+            alert(`Redirecting to secure gateway to contribute ₹${selectedValue.toLocaleString('en-IN')} towards ${selectedFund}!`);
+        }
+    </script>
 
 </body>
 </html>
