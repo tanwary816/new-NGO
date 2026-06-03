@@ -1,11 +1,11 @@
-/* Color Palette Settings Mapping exactly to the Emerald-Lime Layout */
+/* Custom CSS Variables Tokens */
 :root {
-    --bg-dark: #03140e;          /* Deep emerald background */
-    --bg-card: rgba(6, 32, 23, 0.7);
+    --bg-dark: #03140e;
+    --bg-card: rgba(6, 32, 23, 0.85);
     --bg-secondary-dark: #020d09;
-    --lime-primary: #b1f054;     /* Vibrant accent green */
+    --lime-primary: #b1f054;
     --lime-gradient: linear-gradient(90deg, #b1f054, #79cd36);
-    --border-color: rgba(177, 240, 84, 0.15);
+    --border-color: rgba(177, 240, 84, 0.2);
     --text-light: #ffffff;
     --text-muted: #8fa09a;
 }
@@ -22,9 +22,10 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-light);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Header UI Elements */
+/* Header Component */
 header {
     display: flex;
     justify-content: space-between;
@@ -57,10 +58,11 @@ nav ul li a:hover { color: var(--lime-primary); }
 
 /* Hero Presentation Interface */
 .hero {
-    padding: 80px 8%; display: flex; align-items: center; justify-content: space-between;
-    background: linear-gradient(180deg, #041d14 0%, #020d09 100%); min-height: 80vh;
+    padding: 60px 8%; display: flex; align-items: center; justify-content: space-between;
+    background: linear-gradient(180deg, #041d14 0%, #020d09 100%); min-height: 85vh;
+    gap: 40px;
 }
-.hero-content { max-width: 580px; }
+.hero-content { flex: 1; max-width: 580px; }
 .badge {
     background: rgba(177, 240, 84, 0.08); color: var(--lime-primary);
     padding: 6px 16px; border-radius: 20px; font-size: 11px; display: inline-block; margin-bottom: 24px;
@@ -69,7 +71,7 @@ nav ul li a:hover { color: var(--lime-primary); }
 .hero-content h2 { font-size: 48px; font-weight: 400; line-height: 1.2; margin-bottom: 20px; }
 .highlight-green { display: block; font-weight: 700; color: var(--lime-primary); }
 .hero-content p { color: var(--text-muted); margin-bottom: 35px; font-size: 16px; }
-.hero-buttons { display: flex; gap: 15px; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 15px; }
 
 .btn-primary {
     background: var(--lime-gradient); color: #03140e; padding: 14px 30px;
@@ -82,11 +84,12 @@ nav ul li a:hover { color: var(--lime-primary); }
 }
 .btn-secondary:hover { background: rgba(255,255,255,0.05); }
 
-/* Rotating Sphere Vector Framework */
-.hero-visual { position: relative; width: 400px; height: 400px; display: flex; justify-content: center; align-items: center; }
+/* Sphere Graphics Animation */
+.hero-visual { flex: 1; position: relative; width: 100%; max-width: 400px; height: 400px; display: flex; justify-content: center; align-items: center; }
 .glow-sphere-green {
-    position: absolute; width: 360px; height: 360px;
+    position: absolute; width: 100%; height: 100%;
     background: radial-gradient(circle, rgba(177, 240, 84, 0.15) 0%, rgba(3, 20, 14, 0) 70%); border-radius: 50%;
+    pointer-events: none;
 }
 .earth-container {
     width: 290px; height: 290px; border-radius: 50%;
@@ -100,15 +103,15 @@ nav ul li a:hover { color: var(--lime-primary); }
 .heart-handshake { font-size: 42px; }
 .earth-brand-tag { font-weight: 700; color: white; font-size: 11px; letter-spacing: 3px; margin-top: 6px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
 
-/* Modular Feature Block Base styling */
-.feature-section { padding: 90px 8%; text-align: center; }
+/* Feature Blocks Styling */
+.feature-section { padding: 90px 8%; text-align: center; clear: both; }
 .dark-bg { background-color: var(--bg-secondary-dark); }
 .section-tag { color: var(--lime-primary); font-size: 11px; font-weight: 700; letter-spacing: 2.5px; display: block; margin-bottom: 12px; }
 .section-subtitle { color: var(--text-muted); font-size: 15px; margin-bottom: 45px; max-width: 600px; margin-left: auto; margin-right: auto; }
 .block-btn { width: 100%; border: none; cursor: pointer; font-size: 15px; font-weight: 700; }
 
-/* FEATURE 1: Form & Metric Elements styling */
-.campaign-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto; }
+/* Metrics Panels */
+.campaign-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto; }
 .campaign-card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 35px; border-radius: 12px; text-align: left; position: relative; }
 .campaign-tag { position: absolute; top: 22px; right: 22px; font-size: 10px; background: rgba(177, 240, 84, 0.12); color: var(--lime-primary); padding: 4px 10px; border-radius: 4px; font-weight: 700; letter-spacing: 0.5px; }
 .campaign-card h3 { font-size: 20px; margin-bottom: 12px; max-width: 75%; }
@@ -117,41 +120,54 @@ nav ul li a:hover { color: var(--lime-primary); }
 .progress-bar { height: 100%; background: var(--lime-gradient); border-radius: 4px; }
 .progress-stats { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); }
 
-/* FEATURE 2: Onboarding Framework UI */
+/* Onboarding Application Hub */
 .portal-form { background: var(--bg-card); border: 1px solid var(--border-color); max-width: 700px; margin: 0 auto; padding: 40px; border-radius: 14px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-.form-row { display: flex; gap: 24px; margin-bottom: 24px; }
-.form-group { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.form-row { display: flex; gap: 24px; margin-bottom: 24px; flex-wrap: wrap; }
+.form-group { flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 8px; }
 .form-group label { font-size: 13px; font-weight: 600; color: var(--text-light); letter-spacing: 0.3px; }
-.form-group input, .form-group select { background: rgba(0,0,0,0.4); border: 1px solid var(--border-color); color: white; padding: 14px; border-radius: 8px; font-size: 14px; transition: border-color 0.2s; }
+.form-group input, .form-group select { background: rgba(0,0,0,0.4); border: 1px solid var(--border-color); color: white; padding: 14px; border-radius: 8px; font-size: 14px; transition: border-color 0.2s; width: 100%; }
 .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--lime-primary); }
 
-/* FEATURE 3: Donation Cards Platform */
+/* Donation Selection Panel */
 .donation-card { background: var(--bg-card); border: 1px solid var(--border-color); max-width: 460px; margin: 0 auto; padding: 35px; border-radius: 14px; }
 .donation-toggle { display: flex; background: rgba(0,0,0,0.4); padding: 5px; border-radius: 25px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.05); }
 .toggle-btn { flex: 1; background: transparent; border: none; color: white; padding: 10px; border-radius: 20px; font-weight: 600; cursor: pointer; font-size: 14px; }
 .toggle-btn.active { background: var(--lime-gradient); color: #03140e; font-weight: 700; }
-.amount-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
+.amount-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 12px; margin-bottom: 28px; }
 .amount-btn { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: white; padding: 12px 0; border-radius: 8px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
 .amount-btn.active, .amount-btn:hover { border-color: var(--lime-primary); color: var(--lime-primary); background: rgba(177,240,84,0.06); }
 .donation-impact-text { font-size: 13px; color: var(--text-muted); margin-bottom: 28px; background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px; border-left: 3px solid var(--lime-primary); text-align: left; }
 
-/* FEATURE 4: Mapping Engine Framework */
-.map-container { display: flex; justify-content: center; }
+/* FIXED MAP RE-ENGINEERING: High visibility grid mesh structure ensures representation shows cleanly on all browsers */
+.map-container { display: flex; justify-content: center; width: 100%; padding: 10px 0; }
 .mock-map {
-    width: 100%; max-width: 800px; height: 380px; background: rgba(4,24,17,0.4); border: 2px dashed var(--border-color);
+    width: 100%; min-width: 300px; max-width: 800px; height: 380px; 
+    background-color: #020d09;
+    background-image: radial-gradient(rgba(177, 240, 84, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    border: 1px solid var(--border-color);
     border-radius: 14px; display: flex; justify-content: center; align-items: center; position: relative;
+    box-shadow: inset 0 0 30px rgba(4, 24, 17, 0.8);
 }
-.hotspot { position: absolute; width: 14px; height: 14px; background: var(--lime-primary); border-radius: 50%; cursor: pointer; }
+.grid-line { position: absolute; background: rgba(177, 240, 84, 0.03); }
+.grid-line.horizontal { width: 100%; height: 1px; }
+.grid-line.vertical { height: 100%; width: 1px; }
+
+.map-wireframe-text { color: var(--lime-primary); opacity: 0.6; font-size: 12px; font-weight: bold; letter-spacing: 2px; pointer-events: none; text-shadow: 0 0 10px rgba(177,240,84,0.3); }
+.hotspot { position: absolute; width: 16px; height: 16px; background: var(--lime-primary); border-radius: 50%; z-index: 5; }
 .pulse { width: 100%; height: 100%; background: var(--lime-primary); border-radius: 50%; animation: ping 1.6s infinite ease-in-out; opacity: 0.7; }
-@keyframes ping { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(3.2); opacity: 0; } }
+@keyframes ping { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(3.5); opacity: 0; } }
+
 .tooltip {
-    visibility: hidden; width: 200px; background: #010705; border: 1px solid var(--lime-primary); color: white;
-    padding: 12px; border-radius: 8px; font-size: 12px; position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%); z-index: 10; text-align: left; box-shadow: 0 8px 24px rgba(0,0,0,0.6); line-height: 1.5;
+    visibility: hidden; width: 220px; background: #010705; border: 1px solid var(--lime-primary); color: white;
+    padding: 12px; border-radius: 8px; font-size: 12px; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10; text-align: left; box-shadow: 0 8px 24px rgba(0,0,0,0.8); line-height: 1.5;
 }
 .hotspot:hover .tooltip { visibility: visible; }
+.hub-north { top: 38%; left: 45%; }
+.hub-south { top: 62%; left: 52%; }
 
-/* FEATURE 5: Visual Matrix Panels */
-.carousel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto; }
+/* Stakeholder Testimonials */
+.carousel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto; }
 .video-card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 24px; border-radius: 14px; text-align: left; }
 .video-thumbnail {
     width: 100%; height: 160px; background: linear-gradient(135deg, #093c26, #020d09); border-radius: 10px;
@@ -162,12 +178,21 @@ nav ul li a:hover { color: var(--lime-primary); }
 .video-card p { font-size: 13px; color: var(--text-muted); font-style: italic; line-height: 1.5; }
 
 /* Footer */
-footer { background: #010705; text-align: center; padding: 35px 20px; font-size: 13px; color: var(--text-muted); border-top: 1px solid var(--border-color); letter-spacing: 0.3px; }
+footer { background: #010705; text-align: center; padding: 35px 20px; font-size: 13px; color: var(--text-muted); border-top: 1px solid var(--border-color); }
 
-/* Responsive Adaptability Breaks */
+/* Screen Width Breaks */
+@media(max-width: 992px) {
+    .hero { flex-direction: column; text-align: center; padding: 40px 5%; gap: 30px; }
+    .hero-content { max-width: 100%; }
+    .hero-buttons { justify-content: center; }
+    .hero-visual { width: 280px; height: 280px; }
+    .earth-container { width: 220px; height: 220px; }
+}
+
 @media(max-width: 768px) {
-    header, .hero, .form-row { flex-direction: column; gap: 18px; text-align: center; }
+    header { flex-direction: column; gap: 15px; padding: 20px 5%; }
     nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
-    .hero-visual { display: none; }
-    .hero-content h2 { font-size: 34px; }
+    .form-row { flex-direction: column; gap: 15px; }
+    .form-group { min-width: 100%; }
+    .feature-section { padding: 60px 5%; }
 }
