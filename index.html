@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InAmigos - Advanced NGO Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-area">
+            <div class="logo-icon">👥</div>
+            <div class="logo-text">
+                <h1>InAmigos</h1>
+                <span>Friends In Humanity</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#donate-hub">Donate</a></li>
+                <li><a href="#volunteer-portal">Join Us</a></li>
+                <li><a href="#impact-map">Global Impact</a></li>
+                <li><a href="#campaigns">Active Tracker</a></li>
+            </ul>
+        </nav>
+        <a href="#donate-hub" class="btn-nav-donate">Donate Now 💚</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <span class="badge">🍃 Registered NGO · Est. 2012 · 40+ Nations</span>
+            <h2>We Are <span class="highlight-green">Friends in Humanity</span></h2>
+            <p>InAmigos unites hearts across borders — building schools, healing communities, and restoring dignity for <span class="text-lime">millions of lives</span> who deserve better.</p>
+            <div class="hero-buttons">
+                <a href="#volunteer-portal" class="btn-primary">Join Our Mission →</a>
+                <a href="#campaigns" class="btn-secondary">► View Active Campaigns</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="glow-sphere-green"></div>
+            <div class="earth-container">
+                <div class="earth-overlay-content">
+                    <div class="heart-handshake">💚</div>
+                    <p class="earth-brand-tag">IN AMIGOS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW FEATURE 1: Interactive Tax-Exemption Donation Hub -->
+    <section class="feature-section" id="donate-hub">
+        <span class="section-tag">— FEATURE 1: SMART DONATION HUB —</span>
+        <h2>Empower a Community Today</h2>
+        <p class="section-subtitle">Select your plan. All contributions are 100% secure and tax-exempt under 80G / 501(c)(3) regulations.</p>
+        
+        <div class="donation-card">
+            <div class="donation-toggle">
+                <button class="toggle-btn active">Give Monthly</button>
+                <button class="toggle-btn">One-Time Gift</button>
+            </div>
+            <div class="amount-grid">
+                <button class="amount-btn">$25</button>
+                <button class="amount-btn active">$50</button>
+                <button class="amount-btn">$100</button>
+                <button class="amount-btn">Custom</button>
+            </div>
+            <p class="donation-impact-text">💡 A gift of <strong>$50 a month</strong> provides regular healthcare access for up to 5 children.</p>
+            <a href="#" class="btn-primary block-btn">Proceed to Secure Donation</a>
+        </div>
+    </section>
+
+    <!-- NEW FEATURE 2: Dynamic Skill-Based Volunteer Portal Form -->
+    <section class="feature-section dark-bg" id="volunteer-portal">
+        <span class="section-tag">— FEATURE 2: SKILL-BASED ONBOARDING —</span>
+        <h2>Join Our Global Network</h2>
+        <p class="section-subtitle">We don't just look for hands; we look for unique talents. Tell us how you'd love to help change lives.</p>
+        
+        <form class="portal-form" onsubmit="event.preventDefault();">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="you@example.com" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Primary Skillset</label>
+                    <select required>
+                        <option value="">-- Choose Your Track --</option>
+                        <option value="tech">Web Development / Tech Support</option>
+                        <option value="content">Content Writing & Social Media</option>
+                        <option value="ground">On-Ground Volunteering</option>
+                        <option value="education">Teaching / Mentorship</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>City / Location</label>
+                    <input type="text" placeholder="e.g. New Delhi" required>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary block-btn" style="margin-top: 15px;">Submit Volunteer Application</button>
+        </form>
+    </section>
+
+    <!-- NEW FEATURE 3: Geospatial Regional Impact UI -->
+    <section class="feature-section" id="impact-map">
+        <span class="section-tag">— FEATURE 3: GEOSPATIAL IMPACT MAP —</span>
+        <h2>Our Global Footprint</h2>
+        <p class="section-subtitle">Click on active regional hubs to witness current localized achievements and deployment parameters.</p>
+        
+        <div class="map-container">
+            <div class="mock-map">
+                <!-- Interactive Regional Hotspots -->
+                <div class="hotspot hub-asia">
+                    <div class="pulse"></div>
+                    <div class="tooltip">
+                        <strong>Asia Hub (HQ)</strong><br>📍 65 Cities Active<br>🏫 750+ Schools Financed
+                    </div>
+                </div>
+                <div class="hotspot hub-africa">
+                    <div class="pulse"></div>
+                    <div class="tooltip">
+                        <strong>Africa Operations</strong><br>💧 120+ Clean Water Wells<br>👥 400K+ Medical Direct Aid
+                    </div>
+                </div>
+                <div class="hotspot hub-americas">
+                    <div class="pulse"></div>
+                    <div class="tooltip">
+                        <strong>Americas Liaison</strong><br>📦 15+ Disaster Relief Camps<br>🎓 200+ Scholarships Granted
+                    </div>
+                </div>
+                <span style="color: rgba(255,255,255,0.15); font-size: 20px; font-weight: bold;">[ INTERACTIVE VECTOR MAP WIREFRAME ]</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW FEATURE 4: Transparent Fund-Tracking & Active Campaign UI -->
+    <section class="feature-section dark-bg" id="campaigns">
+        <span class="section-tag">— FEATURE 4: 100% TRANSPARENT TRACKING —</span>
+        <h2>Active Project Portfolios</h2>
+        <p class="section-subtitle">We guarantee absolute real-time auditability. Monitor the progress bars of current campaigns.</p>
+        
+        <div class="campaign-grid">
+            <div class="campaign-card">
+                <div class="campaign-tag">URGENT</div>
+                <h3>Clean Water Infrastructure 2026</h3>
+                <p>Deploying specialized water filtration rigs across remote semi-arid communities.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+                <div class="progress-stats">
+                    <span><strong>$37,500</strong> Raised</span>
+                    <span>Goal: $50,000</span>
+                </div>
+            </div>
+
+            <div class="campaign-card">
+                <div class="campaign-tag">EDUCATION</div>
+                <h3>Digital Inclusion & Tech Kits</h3>
+                <p>Providing custom tablets, basic network modules, and learning tracks to rural school infrastructure.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 45%;"></div>
+                </div>
+                <div class="progress-stats">
+                    <span><strong>$13,500</strong> Raised</span>
+                    <span>Goal: $30,000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW FEATURE 5: Beneficiary Story Carousel Thumbnail Layout -->
+    <section class="feature-section" id="stories">
+        <span class="section-tag">— FEATURE 5: TESTIMONIAL VIDEO CAROUSEL —</span>
+        <h2>Stories From The Field</h2>
+        <p class="section-subtitle">Listen to real-time testimonials from the beautiful individuals at the core of our daily mission.</p>
+        
+        <div class="carousel-grid">
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <span class="play-icon">▶</span>
+                </div>
+                <h4>Meet Aarav — Aspiring Engineer</h4>
+                <p>"The digital lab provided completely altered my vision for what I can achieve tomorrow."</p>
+            </div>
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <span class="play-icon">▶</span>
+                </div>
+                <h4>Amara's Clean Water Journey</h4>
+                <p>"Our community spent 4 hours a day looking for water. Now we spend that time in classrooms."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 InAmigos NGO Campaign - Advanced Figma Features Functional Prototype.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
