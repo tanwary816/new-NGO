@@ -8,6 +8,7 @@
 </head>
 <body>
 
+    <!-- Header Navigation -->
     <header>
         <div class="logo-area">
             <div class="logo-icon">
@@ -30,6 +31,7 @@
         <a href="#donate-hub" class="btn-nav-donate">Donate Now 💚</a>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero" id="about">
         <div class="hero-content">
             <span class="badge">🌿 Registered NGO • Est. 2012 • 40+ Nations</span>
@@ -52,6 +54,7 @@
         </div>
     </section>
 
+    <!-- Impact Counter Section -->
     <section class="feature-section dark-bg" id="impact">
         <span class="section-tag">— BY THE NUMBERS —</span>
         <h2>Impact That Speaks Loudly</h2>
@@ -85,6 +88,7 @@
         </div>
     </section>
 
+    <!-- Core Project Section (Project BachpanShala) -->
     <section class="feature-section" id="projects">
         <span class="section-tag">— FEATURED PROGRAM —</span>
         <h2>Support Project BachpanShala</h2>
@@ -104,6 +108,7 @@
         </div>
     </section>
 
+    <!-- Interactive Donation Section with Updated QR & Bank Data -->
     <section class="feature-section dark-bg" id="donate-hub">
         <span class="section-tag">— LIVE CONTRIBUTION MATRICES —</span>
         <h2>They Need You Now</h2>
@@ -111,6 +116,7 @@
         
         <div class="donation-container-layout">
             
+            <!-- Left Side: Interactive Amount Interface -->
             <div class="donation-card">
                 <h3>Online Gateways</h3>
                 <p class="card-intro-txt">Select a preset amount or choose custom configuration below:</p>
@@ -133,12 +139,14 @@
                 <button class="btn-primary block-btn" onclick="processDonation()">Proceed to Payment Gateway</button>
             </div>
 
+            <!-- Right Side: Official Verified QR Code & ICICI Bank Matrix Details -->
             <div class="direct-transfer-card">
                 <h3>Direct Deposit Options</h3>
                 <p class="transfer-sub">Scan the official UPI code below or configure an IMPS/NEFT routing profile.</p>
                 
                 <div class="qr-wrapper">
-                    <img class="upi-qr-image" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=upi://pay?pa=028205005839@icici&pn=InAmigos%20Foundation" alt="InAmigos Foundation Official UPI QR Code">
+                    <!-- Referencing verbatim file "WhatsApp Image 2026-06-03 at 7.39.21 PM.jpeg" -->
+                    <img class="upi-qr-image" src="WhatsApp Image 2026-06-03 at 7.39.21 PM.jpeg" alt="InAmigos Foundation Official UPI QR Code">
                     <span class="upi-id-badge">Scan to Transfer Directly</span>
                 </div>
 
@@ -165,6 +173,7 @@
         </div>
     </section>
 
+    <!-- Onboarding Registration Form -->
     <section class="feature-section" id="volunteer">
         <span class="section-tag">— READY TO BECOME AN INAMIGO? —</span>
         <h2>Join 18,000 Volunteers Across 65 Cities</h2>
@@ -197,6 +206,7 @@
         </form>
     </section>
 
+    <!-- Footer with Social Matrix Framework from Graphic -->
     <footer>
         <div class="footer-layout">
             <div class="footer-brand">
@@ -213,6 +223,7 @@
         </div>
     </footer>
 
+    <!-- Interactive Script Mechanics -->
     <script>
         let selectedValue = 1000;
         let selectedFund = "Project BachpanShala";
